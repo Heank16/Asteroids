@@ -74,6 +74,7 @@
         <module>Common</module>
         <module>Collision</module>
         <module>Asteroid</module>
+        <module>SilentUpdate</module>
     </modules>
 
     <properties>

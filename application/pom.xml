@@ -32,6 +32,7 @@
             <artifactId>org-netbeans-core-startup</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+<!--
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>Asteroids-branding</artifactId>
@@ -52,11 +53,13 @@
             <artifactId>Collision</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+-->
         <dependency>
             <groupId>dk.sdu.mmmi.cbse.common</groupId>
             <artifactId>Common</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+<!--
         <dependency>
             <groupId>dk.sdu.mmmi.cbse.enemysystem</groupId>
             <artifactId>Enemy</artifactId>
@@ -67,12 +70,20 @@
             <artifactId>Player</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+-->
+        <dependency>
+            <groupId>dk.sdu.mmmi.cbse.silentupdate</groupId>
+            <artifactId>SilentUpdate</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- NbModuleSuite functional in RELEASE70 or later: -->
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-nbjunit</artifactId>
             <version>${netbeans.version}</version>
-            <scope>test</scope> <!-- beyond platform cluster, this often needs to be dropped down to compile/runtime, some other modules in IDE clusters depend on it -->
+            <scope>test
+            </scope> <!-- beyond platform cluster, this often needs to be dropped down to compile/runtime, some other modules in IDE clusters depend on it -->
         </dependency>
         <!-- To use Jelly Tools in your functional tests, add or replace with:
         <dependency>
@@ -118,8 +129,10 @@
                                 <id>extra</id>
                                 <goals>
                                     <goal>autoupdate</goal>
+<!--
                                     <goal>webstart-app</goal>
                                     <goal>build-installers</goal>
+-->
                                 </goals>
                             </execution>
                         </executions>
