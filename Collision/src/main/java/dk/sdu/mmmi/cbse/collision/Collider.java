@@ -11,10 +11,12 @@ import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
+import org.openide.util.lookup.ServiceProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@ServiceProvider(service = IPostEntityProcessingService.class)
 public class Collider implements IPostEntityProcessingService {
 
     @Override
@@ -75,5 +77,4 @@ public class Collider implements IPostEntityProcessingService {
         // entity2 is less than the total radius of the two entities
         return distance < entity1.getRadius() + entity2.getRadius();
     }
-
 }

@@ -11,31 +11,6 @@
     <artifactId>Common</artifactId>
     <packaging>nbm</packaging>
 
-    <name>Common</name>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <repositories>
-        <!--
-        Repository hosting NetBeans modules, especially APIs.
-        Versions are based on IDE releases, e.g.: RELEASE691
-        To create your own repository, use: nbm:populate-repository
-        
-        If you use Apache NetBeans starting with Apache NetBeans 9.0 
-        you can remove the netbeans repository section
-        -->
-        <repository>
-            <id>netbeans</id>
-            <name>NetBeans</name>
-            <url>http://bits.netbeans.org/nexus/content/groups/netbeans/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.netbeans.api</groupId>
@@ -57,7 +32,6 @@
                         <publicPackage>dk.sdu.mmmi.cbse.common.data.entityparts</publicPackage>
                         <publicPackage>dk.sdu.mmmi.cbse.common.events</publicPackage>
                         <publicPackage>dk.sdu.mmmi.cbse.common.services</publicPackage>
-                        <publicPackage>dk.sdu.mmmi.cbse.common.util</publicPackage>
                     </publicPackages>
                 </configuration>
             </plugin>

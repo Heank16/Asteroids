@@ -8,23 +8,30 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Asteroids-parent</name>
-
     <repositories>
         <!--
         Repository hosting NetBeans modules, especially APIs.
         Versions are based on IDE releases, e.g.: RELEASE691
         To create your own repository, use: nbm:populate-repository
-        
-        If you use Apache NetBeans starting with Apache NetBeans 9.0 
+
+        If you use Apache NetBeans starting with Apache NetBeans 9.0
         you can remove the netbeans repository section
         -->
         <repository>
             <id>netbeans</id>
             <name>NetBeans</name>
-            <url>http://bits.netbeans.org/nexus/content/groups/netbeans/</url>
+            <url>https://bits.netbeans.org/nexus/content/groups/netbeans/</url>
         </repository>
     </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <version>${netbeans.version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
@@ -49,11 +56,11 @@
                         <target>1.8</target>
                     </configuration>
                 </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
-            </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.2</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -72,5 +79,6 @@
     <properties>
         <netbeans.version>RELEASE125</netbeans.version>
         <brandingToken>asteroids</brandingToken>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

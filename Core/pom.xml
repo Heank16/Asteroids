@@ -7,69 +7,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>dk.sdu.mmmi.cbse.core</groupId>
     <artifactId>Core</artifactId>
     <packaging>nbm</packaging>
 
-    <name>Core</name>
-
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <libGDX.version>1.10.0</libGDX.version>
     </properties>
 
-    <repositories>
-        <!--
-        Repository hosting NetBeans modules, especially APIs.
-        Versions are based on IDE releases, e.g.: RELEASE691
-        To create your own repository, use: nbm:populate-repository
-        
-        If you use Apache NetBeans starting with Apache NetBeans 9.0 
-        you can remove the netbeans repository section
-        -->
-        <repository>
-            <id>netbeans</id>
-            <name>NetBeans</name>
-            <url>http://bits.netbeans.org/nexus/content/groups/netbeans/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <dependencies>
-        <dependency>
-            <groupId>dk.sdu.mmmi.cbse.asteroid</groupId>
-            <artifactId>Asteroid</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>dk.sdu.mmmi.cbse.collision</groupId>
-            <artifactId>Collision</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
         <dependency>
             <groupId>dk.sdu.mmmi.cbse.common</groupId>
             <artifactId>Common</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>dk.sdu.mmmi.cbse.enemysystem</groupId>
-            <artifactId>Enemy</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>dk.sdu.mmmi.cbse.playersystem</groupId>
-            <artifactId>Player</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-api-annotations-common</artifactId>
-            <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.netbeans.api</groupId>
-            <artifactId>org-openide-modules</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
         <dependency>
@@ -99,6 +53,12 @@
             <artifactId>gdx-box2d-platform</artifactId>
             <classifier>natives-desktop</classifier>
             <version>${libGDX.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-modules</artifactId>
+            <version>${netbeans.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

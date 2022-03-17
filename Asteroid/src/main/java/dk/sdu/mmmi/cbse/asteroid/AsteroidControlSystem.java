@@ -12,6 +12,8 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
+import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
+import org.openide.util.lookup.ServiceProvider;
 
 import java.util.Random;
 
@@ -21,6 +23,7 @@ import static java.lang.Math.PI;
 /**
  * @author Phillip O
  */
+@ServiceProvider(service = IEntityProcessingService.class)
 public class AsteroidControlSystem implements IEntityProcessingService {
     @Override
     public void process(GameData gameData, World world) {
